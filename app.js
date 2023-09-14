@@ -1,11 +1,11 @@
-const express  = require('express');
+const express = require('express');
 
 const app = express();
 const shopRoutes = require('./routes/shop');
 const adminRoutes = require('./routes/admin');
 
 app.use(express.static('public'));
-app.use(express.urlencoded({extended: false}))
+app.use(express.urlencoded({ extended: false }))
 
 app.set('view engine', 'ejs');
 app.set('views', 'views');
@@ -20,4 +20,4 @@ app.use('/', (req, res, next) => {
 
 
 
-app.listen(3001);
+app.listen(3000);
